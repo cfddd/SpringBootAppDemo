@@ -16,6 +16,7 @@
 
 package com.example.springbootappdemo.demos.Contorller;
 
+import com.example.springbootappdemo.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

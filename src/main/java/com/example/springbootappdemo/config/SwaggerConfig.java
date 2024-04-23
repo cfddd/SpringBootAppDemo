@@ -15,7 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration  //告诉Spring容器这是Swagger的配置类
 @EnableSwagger2 //启用Swagger2功能
 public class SwaggerConfig implements WebMvcConfigurer {
-
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)

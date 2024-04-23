@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 
-package com.example.springbootappdemo.demos.Contorller;
+package com.example.springbootappdemo.entity;
+
+import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
  */
+@TableName("user")
 public class User {
-
+    private int id;
     private String name;
 
     private Integer age;
@@ -40,4 +43,13 @@ public class User {
     public void setAge(Integer age) {
         this.age = age;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
+// alt + insert get set
