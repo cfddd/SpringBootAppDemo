@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.springbootappdemo.mapper.UserMapper">
+
+    <sql id = "commonSelect">
+        select
+            *
+        from `user`
+    </sql>
+
+    <!-- findByName -->
+    <!--id:方法名，resultType：结果类型-->
+    <select id="findByName" resultType="com.example.springbootappdemo.entity.User">
+        <include refid="commonSelect"/>
+         where `name` = #{name}
+    </select>
+
+    <select id="searchList" resultType="com.example.springbootappdemo.entity.User">
+        <include refid="commonSelect"/>
+        <where>
+            <if test="name != null">
+                name like concat('%',#{name},'%')
+            </if>
+            <if test="ageL != 0 and ageR != 0">
+                and age between #{ageL} and #{ageR}
+            </if>
+        </where>
+        order by age desc
+    </select>
+
+    <update id="updateDetail">
+        update user
+        <set>
+            <if test="name != null">name = #{name},</if>,
+            <if test="name != null">age = #{age}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--
+    collection:遍历的集台
+    item:遍历出来的元素
+    separator:分隔符
+    open:遍历开始前拼接的SQL片段
+    close:遍历结束后拼接的SQL片段
+    -->
+    <!--最后拼接组成的是形如 (1,2,3)-->
+    <delete id="deleteByIds">
+        delete from user
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

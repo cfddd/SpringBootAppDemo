@@ -27,4 +27,11 @@ public interface UserMapper extends BaseMapper<User> {
     @Select("select * from user where id=#{id}")
     public User find(int id);
 
+    public User findByName(String name);
+
+    public List<User> searchList(@Param("name") String name, @Param("ageL") int ageL, @Param("ageR") int ageR);
+
+    public int updateDetail(String name, int age,int id);
+
+    public int deleteByIds(@Param("ids") List<Integer> ids);
 }
