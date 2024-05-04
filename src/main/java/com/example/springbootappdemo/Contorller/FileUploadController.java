@@ -1,4 +1,4 @@
-package com.example.springbootappdemo.demos.Contorller;
+package com.example.springbootappdemo.Contorller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

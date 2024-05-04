@@ -21,13 +21,13 @@ public class TimeAspect {
         long begin = System.currentTimeMillis();
 
         // 2.调用原始方法运行
-        Object result = joinPoint.proceed();
+        Object MyResult = joinPoint.proceed();
 
         // 3.计算结束时间，计算耗时操作
         long end = System.currentTimeMillis();
         log.info(joinPoint.getSignature() + " used " + (end - begin) + " ms");
 
-        return result;
+        return MyResult;
     }
     @Before("pc()")
     public void Before(){

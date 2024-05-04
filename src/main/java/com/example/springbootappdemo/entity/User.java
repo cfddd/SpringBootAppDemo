@@ -17,18 +17,28 @@
 package com.example.springbootappdemo.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
  */
 @TableName("user")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
-    private int id;
+    private Long id;
+    private Long role_id;
     private String name;
 
     private Integer age;
+
+    private String account;
+    private String password;
+    /** 用户头像 */
+    private String avatar;
 
 //    public String getName() {
 //        return name;

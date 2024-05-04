@@ -30,10 +30,10 @@ public class JoinPoints {
         Object[] args = joinPoint.getArgs();
         log.info("形参 " + Arrays.toString(args));
 
-        Object result = joinPoint.proceed();
-        log.info("returning" + result.toString());
+        Object MyResult = joinPoint.proceed();
+        log.info("returning" + MyResult.toString());
 
-        return result;
+        return MyResult;
     }
     @Before("pc()")
     public void Before(JoinPoint joinPoint)

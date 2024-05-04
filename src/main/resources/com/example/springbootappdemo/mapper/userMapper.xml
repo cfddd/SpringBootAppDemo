@@ -9,6 +9,18 @@
         from `user`
     </sql>
 
+    <insert id="create" parameterType="com.example.springbootappdemo.entity.User">
+        INSERT INTO user (role_id, name, age, account, password, avatar)
+        VALUES (#{role_id}, #{name}, #{age}, #{account}, #{password}, #{avatar})
+    </insert>
+
+    <select id="checkLogin" parameterType="com.example.springbootappdemo.entity.User"
+            resultType="com.example.springbootappdemo.entity.User">
+        <include refid="commonSelect"/>
+        <where>
+            account = #{account} and password = #{password}
+        </where>
+    </select>
     <!-- findByName -->
     <!--id:方法名，resultType：结果类型-->
     <select id="findByName" resultType="com.example.springbootappdemo.entity.User">

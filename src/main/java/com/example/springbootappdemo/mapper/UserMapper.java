@@ -12,8 +12,7 @@ public interface UserMapper extends BaseMapper<User> {
     public List<User> list();
 
     // 增加一个用户，返回插入用户的成功条数
-    @Insert("insert into user values (#{id},#{name},#{age})")
-    public int insert(User user);
+    public Integer create(User user);
 
     // 删除
     @Delete("delete from user where id=#{id}")
@@ -25,7 +24,9 @@ public interface UserMapper extends BaseMapper<User> {
 
     // 查询
     @Select("select * from user where id=#{id}")
-    public User find(int id);
+    public User find(Long id);
+
+    public User checkLogin(User user);
 
     public User findByName(String name);
 

@@ -1,4 +1,4 @@
-package com.example.springbootappdemo.demos.Contorller;
+package com.example.springbootappdemo.Contorller;
 
 import com.example.springbootappdemo.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;

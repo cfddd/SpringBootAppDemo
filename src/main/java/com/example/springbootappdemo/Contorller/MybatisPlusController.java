@@ -1,4 +1,4 @@
-package com.example.springbootappdemo.demos.Contorller;
+package com.example.springbootappdemo.Contorller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;

@@ -1,7 +1,6 @@
 package com.example.springbootappdemo.testBean;
 
-import com.example.springbootappdemo.demos.Contorller.TestBeanController;
-import com.example.springbootappdemo.service.impl.GetData;
+import com.example.springbootappdemo.Contorller.TestBeanController;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;

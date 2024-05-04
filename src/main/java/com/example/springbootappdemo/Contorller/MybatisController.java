@@ -1,4 +1,4 @@
-package com.example.springbootappdemo.demos.Contorller;
+package com.example.springbootappdemo.Contorller;
 
 import com.example.springbootappdemo.anno.MyLog;
 import com.example.springbootappdemo.entity.User;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+/*
 @RestController
 public class MybatisController {
     // 自动注入UserMapper
@@ -46,3 +46,4 @@ public class MybatisController {
         return userMapper.find(id);
     }
 }
+*/
