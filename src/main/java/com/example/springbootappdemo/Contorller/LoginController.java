@@ -20,7 +20,7 @@ public class LoginController {
     LoginService loginService;
     private User result;
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public MyResult login(String account, String password){
         User user = new User(null,null,null,null,account,password,null);
         result = loginService.login(user);
